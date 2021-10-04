@@ -1,6 +1,6 @@
-#ifndef MAX_H
-#define MAX_H
+#ifndef MAX
+#define MAX
 
-int max(int a, int b);
+int max(int* numbers, int size);
 
-#endif // MAX_H
+#endif 

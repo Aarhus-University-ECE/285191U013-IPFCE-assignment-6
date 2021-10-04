@@ -1,33 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
 project(template)
 include(CTest)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# static checks
-# if(MSVC)
-#   add_compile_options(/W4 /WX)
-# else()
-#   add_compile_options(-Wall -Wextra -pedantic -Werror)
-# endif()
-
-# set(CMAKE_CXX_CLANG_TIDY
-#   clang-tidy;
-#   -checks=*;
-# )
-
-# set(CMAKE_CXX_CPPCHECK
-#   cppcheck;
-#   --error-exitcode=1;
-# )
-
 
 # define library called queue that can imported into other targets via
 # 'target_link_libraries'
-add_library(mymath src/max.c src/swap.c src/max_sum.c)
+add_library(mymath src/max.c)
 target_include_directories(mymath PUBLIC include)
 
-# define executable named main for experimenting and debugging code
+# add the exectuable
 add_executable(main src/main.cpp)
 target_link_libraries(main mymath)
 
