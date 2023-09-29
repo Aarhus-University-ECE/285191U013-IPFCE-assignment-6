@@ -1,5 +1,4 @@
-#ifndef LIST
-#define LIST
+#pragma once
 
 typedef struct node {
   int data;
@@ -10,5 +9,3 @@ void add(node *head, int x);
 int size(node *l);
 void printout(node *l);
 int largest(node *l);
-
-#endif 
