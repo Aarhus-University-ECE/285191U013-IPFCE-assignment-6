@@ -31,6 +31,6 @@ endforeach ()
 
 add_executable(unit-tests tests/tests.cpp)
 target_include_directories(unit-tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(unit-tests max list)
-target_link_libraries(unit-tests Catch2::Catch2WithMain)
+target_link_libraries(unit-tests PRIVATE max list)
+target_link_libraries(unit-tests PRIVATE Catch2::Catch2WithMain)
 target_compile_definitions(unit-tests PUBLIC -DTEST)

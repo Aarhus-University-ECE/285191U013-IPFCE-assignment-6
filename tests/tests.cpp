@@ -1,5 +1,4 @@
 #include <catch2/catch_test_macros.hpp>
-// #include <catch2/matchers/catch_matchers_floating_point.hpp>
 
 extern "C" {
 #include "list.h"
@@ -7,7 +6,7 @@ extern "C" {
 #include <stdlib.h>
 }
 
-// TEST_CASE("test") { REQUIRE(false); }
+// TEST_CASE("test") { REQUIRE(1 == 1); }
 
 TEST_CASE("max", "[max]") {
   {
@@ -21,6 +20,10 @@ TEST_CASE("max", "[max]") {
   {
     int numbers[] = {-2};
     REQUIRE(max(numbers, 1) == -2);
+  }
+  {
+    int numbers[] = {-2, -5, -42, -67, -100, -1};
+    REQUIRE(max(numbers, 1) == -1);
   }
   {
     int numbers[] = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -55,10 +58,9 @@ TEST_CASE("largest", "[list]") {
   l->next->next = NULL;
   l->next->data = 0;
   REQUIRE(largest(l) == 0);
-
-  node *p;
+  
   for (int i = 10; i > 0; i--) {
-    p = l;
+    node *p = l;
     while (p->next != NULL) {
       p = p->next;
     }

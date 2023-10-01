@@ -19,6 +19,7 @@ void add(node *head, int x) {
   p->next = element;
 }
 
+// exersice 3.b
 int size(node *l) { return 0; }
 
 // exersice 3.c and 3.d
@@ -36,12 +37,13 @@ void printout(node *l) {
 // exersice 3.e
 int largest(node *l) {
   // pre:  head poinst to the first, empty element.
-  // 	   The last element's next is NULL.
+  // 	     The last element's next is NULL.
   // post: Returns the largest value of the list
 
   return 0;
 }
 
+#ifndef TEST
 int main() {
   node *list = malloc(sizeof(node));
   list->next = NULL; // create first empty element
@@ -55,3 +57,5 @@ int main() {
 
   return 0;
 }
+
+#endif
