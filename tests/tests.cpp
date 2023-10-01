@@ -58,7 +58,7 @@ TEST_CASE("largest", "[list]") {
   l->next->next = NULL;
   l->next->data = 0;
   REQUIRE(largest(l) == 0);
-  
+
   for (int i = 10; i > 0; i--) {
     node *p = l;
     while (p->next != NULL) {

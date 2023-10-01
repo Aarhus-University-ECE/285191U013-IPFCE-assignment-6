@@ -11,6 +11,9 @@ int max(int *numbers, int size) {
 
 #ifndef TEST
 
-int main() { return 0; }
+int main() {
+
+	return 0;
+}
 
 #endif

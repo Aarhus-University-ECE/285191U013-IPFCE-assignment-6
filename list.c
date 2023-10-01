@@ -20,7 +20,10 @@ void add(node *head, int x) {
 }
 
 // exersice 3.b
-int size(node *l) { return 0; }
+int size(node *l) {
+
+	return 0;
+}
 
 // exersice 3.c and 3.d
 void printout(node *l) {
